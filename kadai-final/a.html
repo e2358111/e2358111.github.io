@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- メモの仕方はメモを書いた後Ctrl+/で可能 -->
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ohori Yuka">
+
+    <!-- ページ内容を表すキーワード -->
+    <meta name="keywords" content="html,css,javascript">
+
+    <title>名探偵コナンのキャラクター紹介</title>
+
+    <link rel="stylesheet" href="./css/a.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>名探偵コナンの世界へようこそ！</h1>
+        <nav class="global-nav">
+            <ul>
+                <li><a href="index.html">キャラクター紹介</a></li>
+                <li><a href="a.html">個人的映画ランキング</a></li>
+                <li><a href="b.html">2025年映画の魅力</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section>
+            <h2>TOP10</h2>
+            <button id="toggleTop5">TOP5のみ表示</button>
+            <button id="toggleAll">全て表示</button>
+
+            <ol class="a" id="movieList">
+                <li class="top5">瞳の中の暗殺者 /2000年
+
+                    <img src="img/Gemini_Generated_Image_fh2cclfh2cclfh2c.jpg" alt="瞳の中の暗殺者の画像" width="400" height="380">
+                    <p>次々と警察官が殺害されていく中、蘭があることをきっかけに記憶喪失になってしまう。そんな中、犯人は蘭を殺しにかかる。どうやら蘭の記憶の中に犯人がいるようで？</p>
+
+                </li>
+
+                <li class="top5">ベイカーストリートの亡霊 /2002年
+                    <img src="img/Gemini_Generated_Image_iialc0iialc0iial.png" alt="ベイカーストリートの亡霊の画像" width="400" height="370">
+                    <p>イギリスのベイカー街を舞台にした体感シミュレーションゲーム「コクーン」に挑戦することになったコナンたち。しかし、これはゲーム内で脱落すると現実世界でも死んでしまうというもので...</p>
+
+                </li>
+
+                <li class="top5">純黒の悪夢（ナイトメア）/2016年
+                    <img src="img/Gemini_Generated_Image_9frj0p9frj0p9frj.jpg" alt="純黒の悪夢の画像" width="400" height="390">
+                    <p>東都水族館に遊びに来た少年探偵団だったが、そこで黒の組織の幹部「キュラソー」と出会う。コナンたちは黒の組織の猛攻に耐えることができるのか。</p>
+                </li>
+
+                <li class="top5">天国へのカウントダウン /2001年
+                    <img src="img/Gemini_Generated_Image_eim568eim568eim5.jpg" alt="天国へのカウントダウンの画像" width="400" height="350">
+                    <p>日本一の高さを誇るツインタワービルを訪れたコナンたちだったが、ビルのオーナーや関係者が次々と殺害されてしまう。そんな中、新一の身体を小さくした黒の組織の人物たちもなぜかツインタワービルに集まっていて...
+                    </p>
+
+                </li>
+
+                <li class="top5">沈黙の15分（クオーター）/2011年
+                    <img src="img/Gemini_Generated_Image_linvjtlinvjtlinv.jpg" alt="沈黙の15分の画像" width="400" height="300">
+                    <p>都知事に対する脅迫状が届き地下鉄のトンネルが爆破される。知事が国土交通大臣時代に建てたダムの関係者が怪しいと睨んだコナンはダムのある大雪原へと向かう。</p>
+                </li>
+
+                <li class="top6-10">14番目の標的（ターゲット）/1998年</li>
+                <li class="top6-10">漆黒の追跡者（チェイサー）/2009年</li>
+                <li class="top6-10">ハロウィンの花嫁 /2022年</li>
+                <li class="top6-10">黒鉄の魚影（くろがねのサブマリン）/2023年</li>
+                <li class="top6-10">天空の難破船（ロストシップ）/2010年</li>
+
+            </ol>
+
+        </section>
+
+
+        <section>
+
+            <h3>皆さんが好きなコナン映画は何作目ですか？</h3>
+            <!-- HTMLからJavascriptの関数を実行する -->
+            <!-- ボタンとonclick属性を使うのが一番簡単 -->
+
+
+            <button type="button" onclick="likemovie(0)">1作目~5作目</button>
+            <button type="button" onclick="likemovie(1)">6作目~10作目</button>
+            <button type="button" onclick="likemovie(2)">11作目~15作目</button>
+            <button type="button" onclick="likemovie(3)">16作目~20作目</button>
+            <button type="button" onclick="likemovie(4)">21作目~25作目</button>
+            <button type="button" onclick="likemovie(5)">26作目~28作目</button>
+
+            <!-- 色々な言語のこんにちはを表示（Javascript側から操作 -->
+
+            <p id="likemovie">ここに各映画の名前が表示されます</p>
+            <h3>TOP5の興行収入</h3>
+
+            <canvas id="movieChart" width="400" height="200"></canvas>
+
+
+            <!-- Alt shift F の>インデントをきれいにできる -->
+        </section>
+
+        <section>
+            <h3>他にも見たい方はこちら</h3>
+            <ul>
+                <li>
+                    <!-- 相対パスでリンクさせたいページを指定。../で1つ階層が上がる -->
+                    <a href="../kadai1/index.html">名探偵コナンのキャラクター紹介</a>
+                </li>
+                <li>
+                    <!-- 相対パスでリンクさせたいページを指定。../で1つ階層が上がる -->
+                    <a href="../kadai1/b.html">最新映画の魅力</a>
+                </li>
+
+
+            </ul>
+        </section>
+
+
+
+
+    </main>
+    <footer>
+         <p>※掲載されている画像はすべて生成AIによって作成されたものです。</p>
+        Copyright &copy; O_Y, All Rights Reserved.
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/chart-test.js"></script>
+
+
+
+
+</body>
+
+</html>

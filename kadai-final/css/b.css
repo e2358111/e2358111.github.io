@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+
+
+* {
+    font-family: "メイリオ",sans-serif,serif; 
+}
+
+
+/* header */
+header {
+    background-color: #4CAF50; /* テーマカラーに合わせて調整 */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+/* Global Navigation */
+.global-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* 横並びにする */
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* リンク間のスペース */
+}
+
+.global-nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.global-nav li a:hover {
+    background-color: #5cb85c; /* ホバー時の背景色 */
+}
+
+
+
+
+.accordion-header {
+    cursor: pointer; /* クリックできることを示す */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.accordion-content {
+    display: none; /* 初期状態では非表示 */
+    padding: 10px;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+
+body {
+    font-size: 20px;
+    background-color: pink;
+}
+
+p {
+
+    /* RGB + アルファチャンネル（透明度）で指定 */
+    color: black;
+
+    line-height: 2rem;
+
+    text-align: left;
+
+}
+
+
+
+
+
+
+table {
+    /* 上から時計回り */
+    margin: 0 0 0 24px;
+    /* 上と下 */
+    padding: 24px 0;  
+    border: 2px solid gold;
+}
+
+.gnav >ul > li  {
+    /* ボックスモデルの変更（→ inline ボックス） */
+    margin: 0 8px 0 0;
+    
+    display: inline;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 8px 4px;
+    background: linear-gradient(#FFF, #999)
+}
+
+.container-a {
+    /* グリッドコンテナ */
+    display: grid;
+    /* グリッド列の定義 */
+    /* fr: 表示領域の比率の単位 */
+    
+    
+    
+    /* 2:1:1 */
+    grid-template-columns: 2fr 1fr 1fr;
+    
+    /* 一番左を固定幅にしたい */
+    grid-template-columns: 200px 1fr 1fr;
+
+
+    /* グリッドトラック間のギャップ */
+    /* 列 */
+    column-gap: 24px;
+    /* 行 */
+    row-gap: 1em;
+
+    /* グリッド行の定義 */
+    grid-template-rows: 100px 200px 1fr 1fr;
+}
+
+
+.container-a >div {
+    background-color: #088;
+}
+
+
+
+
+
+
+/* 属性セレクター */
+/* 属性セレクターは[]をつけて指定する */
+p[class="blue"] {
+    color:blue;
+}
+
+p[class="purple"] {
+    color:purple
+}
+
+
+/* 疑似クラスセレクター */
+/* ぎ */
+/* 未訪問のリンク */
+a:link {
+    color: palevioletred;
+}
+
+
+/* マウスオーバーしたとき */
+a:hover {
+    color: red;
+    font-size: 4em;
+}
+h2:hover {
+    border: 2px solid red;
+}
+
+
+
+
+
+
+/* 例：最初の文字を指定する */
+p[class="blue"]::first-letter {
+    font-size: 2em;
+}
+
+p[class="purple"]::first-letter {
+    font-size: 2em;
+}
+
+
+/* セレクター結合し */
+/* 小孫結合子 */
+section li {
+    text-align: left;
+}
+
+
+
+/* 隣接兄弟結合し */
+p + P {
+    color: black;
+}
+
+/* 一般兄弟結合子 */
+h3 ~ p {
+    font-family: serif;
+}
+
+
+input[type="button"] {
+    margin: 4px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #0088ff, #bbddff);
+    
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block; /* ラベルをブロック要素にして改行 */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: calc(100% - 20px); /* パディングを考慮して幅を調整 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"],
+form input[type="reset"],
+form input[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+form input[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* ラジオボタンとチェックボックスのスタイル調整 */
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+form label[for="female"],
+form label[for="male"],
+form label[for="other"],
+form label[for="none"],
+form label[for="agreement"] {
+    display: inline-block; /* ラジオボタンやチェックボックスと並べるため */
+    margin-right: 15px;
+}

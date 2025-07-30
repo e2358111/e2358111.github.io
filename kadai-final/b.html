@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- メモの仕方はメモを書いた後Ctrl+/で可能 -->
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ohori Yuka">
+
+    <!-- ページ内容を表すキーワード -->
+    <meta name="keywords" content="html,css,javascript">
+
+    <title>名探偵コナンのキャラクター紹介</title>
+
+    <link rel="stylesheet" href="./css/b.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>名探偵コナンの世界へようこそ！</h1>
+        <nav class="global-nav">
+            <ul>
+                <li><a href="index.html">キャラクター紹介</a></li>
+                <li><a href="a.html">個人的映画ランキング</a></li>
+                <li><a href="b.html">2025年映画の魅力</a></li>
+            </ul>
+        </nav>
+        
+
+
+
+
+    </header>
+
+    <main>
+
+
+        <section>
+            <h2>『名探偵コナン 隻眼の残像』</h2>
+            <p>私は4月19日に劇場版名探偵コナンの最新作「隻眼の残像（フラッシュバック）」を見に行きました。今回はその感想と魅力を伝えたいと思います。</p>
+            <h2>魅力１：毛利小五郎の活躍</h2>
+            <img src="img/Gemini_Generated_Image_21zntb21zntb21zn.jpg" alt="毛利小五郎の画像" width="400" height="250">
+            <p class="purple">皆さんは毛利小五郎の凄さをどれだけ知っているでしょうか？</p>
+            <p>実は毛利小五郎は射撃の天才で警察学校時代に最初の試射で20発全弾をど真ん中に打ち抜いた実力を持つんです。さらに、作中で出てきたキャラクターの中で現時点で射撃が最も上手いのは小五郎です。</p>
+            <p>今回の映画ではそんな射撃の名手である小五郎の活躍が見れちゃいます。私は、小五郎の射撃に一番感動しました。</p>
+
+
+        </section>
+        <section>
+            <h2>魅力2：長野県警の絆</h2>
+            <img src="img/Gemini_Generated_Image_uh7uswuh7uswuh7u.jpg" alt="長野県警の画像" width="400"
+                height="250">
+            <p class="blue">皆さんは名探偵コナンの長野県警をどれくらい知っていますか？</p>
+            <p>長野県警は主に大和勘助、諸伏高明、上原由衣の3人の事を表しています。作中の警察官の中でもトップレベルで優秀なのが長野県警です。この3人は幼馴染で、大和警部と諸伏警部は同い年の35歳。上原刑事は6歳年下の29歳です。
+            </p>
+            <p>今回の映画は大和警部の隻眼の理由や記憶に迫るような物語です。大和警部が8カ月前に捜査中に雪崩に逢い、意識不明の重体で行方不明になった際、諸伏警部は何としても大和警部の居場所を見つけるため無茶な操作をして本部から所轄に飛ばされました。
+            </p>
+            <p>上原刑事は大和警部の事が好きでしたが、死んでしまったと思い、自分と大和警部が慕っていた甲斐さんという警察官の死の捜査をするため、関係者がいる虎田家に嫁ぎました。今回の映画でも狙われる大和警部を守ろうとする2人とその2人を守ろうとする大和警部の絆がみえて本当に良かったです。
+            </p>
+        </section>
+        <section>
+
+
+            <h3>まだ見ていない方向けに予告映像です</h3>
+            <div >
+                <a href="https://youtu.be/p6h57WqRRl8?feature=shared" target="_blank" rel="noopener noreferrer">ここからYouTubeの予告映像に飛べます</a>
+                
+            </div>
+
+        </section>
+
+
+        <section>
+            <h3>他にも見たい方はこちら</h3>
+            <ul>
+                <li>
+                    <!-- 相対パスでリンクさせたいページを指定。../で1つ階層が上がる -->
+                    <a href="../kadai1/a.html">名探偵コナン個人的好きな映画TOP10</a>
+                </li>
+                <li>
+                    <!-- 相対パスでリンクさせたいページを指定。../で1つ階層が上がる -->
+                    <a href="../kadai1/index.html">名探偵コナンのキャラクター紹介</a>
+                </li>
+
+
+            </ul>
+        </section>
+
+        <section>
+            <h2>隻眼の残像の感想投稿フォーム</h2>
+
+            <!-- サーバーにデータを送信する -->
+            <!-- action:サーバーサイドの処理が書かれているプログラムを指定する -->
+            <!-- method: フォームに入力されたデータに由来する別のデータをサーバーから取得するのが目的の場合　→　get -->
+            <!-- method: フォームに入力されたデータをサーバーに送ることが目的の場合　→　post -->
+            <form action="index.html" method="post">
+
+                <!-- チェックボタン -->
+                <!-- チェックが入っているときにサーバーに送信したい値を指定する場合はvalue属性で指定 -->
+                <div>
+                    <input type="checkbox" id="agreement" name="agreement" value="true">
+                    <label for="agreement">プライバシーポリシーに同意する</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">女性</label>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">男性</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">その他</label>
+
+                    <input type="radio" id="none" name="gender" value="none">
+                    <label for="none">その他</label>
+
+                </div>
+
+                <!-- テキストフィールド -->
+                <div>
+                    <label for="remarks">映画の感想文</label>
+                    <textarea name="remarks" id="remarks" cols="60" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <label for="birthday">映画の視聴日</label>
+                    <input type="date" name="birthday" id="birthday">
+                </div>
+
+                <div>
+                    <input type="time" name="time" id="time">
+                </div>
+
+                <!-- フォームを送信するボタン -->
+                <div>
+                    <input type="submit">
+                    <input type="reset">
+                    <input type="button" value="このボタン" id="send-data">
+                </div>
+
+            </form>
+        </section>
+
+
+        <section>
+            <h2>受信データ</h2>
+            <div>
+                映画の視聴日：<span id="display-birthday"></span>
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <hr>
+
+    <footer>
+         <p>※掲載されている画像はすべて生成AIによって作成されたものです。</p>
+        Copyright &copy; O_Y, All Rights Reserved.
+    </footer>
+
+
+    <script>
+        document.getElementById("send-data").onclick = function () {
+            const birthday = document.getElementById("birthday").value;
+
+            document.getElementById("display-birthday").innerText = birthday
+
+        }
+    </script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
